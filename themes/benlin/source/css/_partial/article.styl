@@ -1,0 +1,161 @@
+.article
+  padding-bottom: 80px
+
+.article-header
+  text-align: center
+
+.article-title
+  font-size: font-size-h1
+  color: color-default
+  text-decoration: none
+  line-height: line-height-h1
+  font-weight: bolder
+  margin-bottom: 35px
+  display: block
+
+.article-date
+  color: color-meta
+  font-size: font-size-meta
+  text-decoration: none
+
+.article-date-icon
+  content; ""
+  image: "images/bg-icon-date.png" 12px 12px
+  width: 12px
+  height: 12px
+  display: inline-block
+  margin-right: 4px
+
+.article-share
+  padding-top: 16px
+  .fb-like
+    top: -3px
+
+.article-footer
+  border-top: 1px solid color-border
+  text-align: center
+  margin-top: 80px
+  .article-share
+    padding-top: 20px
+
+.article-entry
+  color: color-default
+  font-weight: 300
+  line-height: 36px
+  p
+    margin: 40px 0
+  a
+    color: color-meta
+    font-weight: normal
+    &:visited
+      color: color-visited
+    &:hover
+      color: color-highlight
+  ul
+    list-style: disc
+    margin-left: 20px
+  ol
+    list-style: decimal
+    margin-left: 25px
+  strong
+    font-weight: bold
+  em
+    font-style: italic
+  hr
+    border: none
+    border-top: 1px solid color-border
+  h1, h2, h3, h4, h5, h6
+    margin: 45px 0 20px
+  h1
+    font-size: font-size-h1
+    line-height: line-height-h1
+    font-weight: 500
+  h2
+    font-size: font-size-h2
+    line-height: line-height-h2
+    font-weight: 500
+  h3
+    font-size: font-size-h3
+    line-height: line-height-h3
+    font-weight: 300
+  h4
+    font-size: font-size-content
+    font-weight: normal
+  h5, h6
+    font-size: font-size-meta
+    font-weight: normal
+  strong
+    font-weight: bold
+  em, cite
+    font-style: italic
+  sup, sub
+    font-size: 0.75em
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+  sup
+    top: -0.5em
+  sub
+    bottom: -0.2em
+  small
+    font-size: 0.85em
+  acronym, abbr
+    border-bottom: 1px dotted
+  // http://webdesignerwall.com/tutorials/css-elastic-videos
+  .video-container
+    position: relative
+    padding-top: (9 / 16 * 100)% // 16:9 ratio
+    height: 0
+    overflow: hidden
+    iframe, object, embed
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      margin-top: 0
+  .caption
+    font-style: italic
+    font-weight: normal
+    line-height: 20px
+    text-align: center
+    display: block
+    margin-top: 10px
+  img
+    display: block
+    margin: 0 auto
+  blockquote
+    font-style: italic
+    font-size: 20px
+    line-height: 30px
+    font-weight: bolder
+    color: color-highlight
+    position: relative
+    margin-top: 80px
+    background-repeat: no-repeat
+    > p:first-child
+      margin-top: 0
+    footer
+      cite
+        &:before
+          content: "—"
+          padding: 0 0.5em
+    @media mq-normal
+      margin-top: 90px 0
+      font-size: 25px
+      line-height: 36px
+    &:before
+      content: ""
+      width: 40px
+      height: 35px
+      position: absolute
+      top: -45px
+      left: 0
+      image: "images/bg-bg-quote.png" 100%
+      @media mq-normal
+        width: 50px
+        height: 44px
+        left: -28px
+        top: -30px
+  img, video
+    max-width: 100%

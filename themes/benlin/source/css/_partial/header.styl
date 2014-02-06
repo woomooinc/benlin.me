@@ -1,0 +1,41 @@
+#header
+  padding: 100px 0 82px
+
+#logo-wrap
+  text-align: center
+
+#logo
+  hide-text()
+  width: 170px
+  height: 140px
+  display: inline-block
+  image: "images/bg-logo-mobile.png" 170px 140px
+  @media mq-normal
+    width: 160px
+    height: 115px
+    image: "images/bg-logo.png" 160px 115px
+
+#lang-switch
+  text-align: center
+  padding-top: 28px
+  @media mq-normal
+    position: absolute
+    top: 25px
+    right: 22px
+    padding-top: 0
+
+.lang-button
+  display: inline-block
+  border: button-border
+  opacity: button-opacity-inactive
+  line-height: 30px - 2px
+  border-radius: 5px
+  width: 70px - 2px
+  text-decoration: none
+  font-size: font-size-meta
+  color: color-meta
+  margin-left: 7px
+  &:hover, &.active
+    opacity: button-opacity-active
+  &:first-child
+    margin-left: 0

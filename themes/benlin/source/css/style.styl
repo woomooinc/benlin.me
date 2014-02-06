@@ -1,0 +1,32 @@
+@import "nib"
+@import "_variables"
+@import "_util/mixin"
+
+global-reset()
+
+body
+  background: color-background
+  font: font-size-content font-sans
+
+.outer
+  clearfix()
+  max-width: max-width
+  margin: 0 auto
+
+.inner
+  margin: 0 layout-margin
+
+.left, .alignleft
+  float: left
+
+.right, .alignright
+  float: right
+
+.clear
+  clear: both
+
+@import "_partial/header"
+@import "_partial/article"
+@import "_partial/archive"
+@import "_partial/footer"
+@import "_partial/highlight"
