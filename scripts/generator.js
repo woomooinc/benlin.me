@@ -14,13 +14,15 @@ hexo.extend.generator.register(function(locals, render, callback){
   langs.forEach(function(lang){
     var posts = locals.posts.find({lang: lang}).sort('date', -1),
       arr = posts.toArray(),
-      length = arr.length;
+      length = arr.length,
+      root = lang === 'en' ? '' : lang + '/';
 
-    paginator(lang === 'en' ? '' : lang, posts, 'index', render);
+    posts.root = config.root + root;
+    paginator(root, posts, 'index', render);
 
     arr.forEach(function(post, i){
       var layout = post.layout,
-        path = (lang === 'en' ? '' : lang + '/') + post.path;
+        path = root + post.path;
 
       if (!layout || layout === 'false'){
         route.set(path, function(fn){
@@ -29,6 +31,7 @@ hexo.extend.generator.register(function(locals, render, callback){
       } else {
         post.prev = i === 0 ? null : arr[i - 1];
         post.next = i === length - 1 ? null : arr[i + 1];
+        post.root = config.root + root;
 
         render(path, [layout, 'post', 'page', 'index'], post);
       }

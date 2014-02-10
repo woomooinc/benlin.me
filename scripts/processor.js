@@ -7,7 +7,8 @@ hexo.extend.processor.register('_posts_:lang/*path', function(data, callback){
   builtinProcessor(data, function(err){
     if (err) return callback(err);
 
-    var post = Post.findOne({source: params.path});
+    var post = Post.findOne({source: data.path});
+    if (!post) return;
 
     post.lang = params.lang;
     post.save();
