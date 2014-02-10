@@ -1,5 +1,5 @@
 .article
-  padding-bottom: 80px
+  padding-bottom: 90px
 
 .article-header
   text-align: center
@@ -10,26 +10,37 @@
   text-decoration: none
   line-height: line-height-h1
   font-weight: bolder
-  margin-bottom: 35px
   display: block
+
+.article-header-divider
+  background: color-meta
+  width: 20px
+  height: 1px
+  margin: 20px auto
 
 .article-date
   color: color-meta
   font-size: font-size-meta
   text-decoration: none
-
-.article-date-icon
-  content; ""
-  image: "images/bg-icon-date.png" 12px 12px
-  width: 12px
-  height: 12px
-  display: inline-block
-  margin-right: 4px
+  line-height: 20px
+  &:before
+    content: ""
+    image: "images/bg-icon-date.png" 12px 12px
+    width: 12px
+    height: 12px
+    display: inline-block
+    margin-right: 4px
 
 .article-share
-  padding-top: 16px
+  display: inline-block
+  padding-left: 15px
   .fb-like
-    top: -3px
+    display: inline-block !important
+    width: auto !important
+  .twitter-tweet-button
+    position: relative
+    top: 4px
+    padding-left: 6px
 
 .article-footer
   border-top: 1px solid color-border
