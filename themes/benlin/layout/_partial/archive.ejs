@@ -1,13 +1,8 @@
 <% page.posts.each(function(post){ %>
-  <%- partial('article', {post: post, index: true}) %>
-<% }) %>
-<% if (page.total > 1){ %>
-  <div id="page-nav">
-    <% if (page.next){ %>
-      <a href="<%- config.root %><%- page.next_link %>" class="page-nav-link left">Older</a>
-    <% } %>
-    <% if (page.prev){ %>
-      <a href="<%- config.root %><%- page.prev_link %>" class="page-nav-link right">Newer</a>
-    <% } %>
+  <div class="article">
+    <div class="article-header">
+      <%- partial('post/title', {post: post, class_name: 'article-title'}) %>
+      <%- partial('post/date', {post: post, date_format: null}) %>
+    </div>
   </div>
-<% } %>
+<% }) %>

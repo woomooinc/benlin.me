@@ -1,5 +1,3 @@
-var paginator = require(hexo.lib_dir + 'plugins/generator/paginator');
-
 hexo.extend.generator.register(function(locals, render, callback){
   var config = hexo.config,
     route = hexo.route;
@@ -17,8 +15,10 @@ hexo.extend.generator.register(function(locals, render, callback){
       length = arr.length,
       root = lang === 'en' ? '' : lang + '/';
 
-    posts.root = config.root + root;
-    paginator(root, posts, 'index', render);
+    render(root, 'index', {
+      posts: posts,
+      root: config.root + root
+    });
 
     arr.forEach(function(post, i){
       var layout = post.layout,
