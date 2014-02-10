@@ -6,6 +6,8 @@
     overflow: auto
     background: color-code-background
     padding: 15px
+    &:hover
+      background: color-code-background-hover
     figcaption
       font-size: font-size-meta
       line-height: line-height-meta
@@ -14,6 +16,9 @@
         float: right
     pre
       padding: 0
+      background: none
+      &:hover
+        background: none
     .gutter pre
       padding-right: 15px
       text-align: right
@@ -21,9 +26,11 @@
   pre, code
     color: color-highlight
     background: color-code-background
-    line-height: 20px
-    font-size: 11px
+    line-height: line-height-code
+    font-size: font-size-code
     font-family: font-mono
+    &:hover
+      background: color-code-background-hover
     .comment
     .template_comment
     .diff .header
