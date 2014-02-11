@@ -56,12 +56,16 @@
   p
     margin: 40px 0
   a
-    color: color-meta
+    color: color-highlight
     font-weight: normal
+    text-decoration: none
+    border-bottom: 1px solid color-highlight
     &:visited
       color: color-visited
+      border-bottom-color: color-visited
     &:hover
       color: color-highlight
+      border-bottom: 2px solid color-highlight
   ul
     list-style: disc
     margin-left: 20px
@@ -80,21 +84,15 @@
   h1
     font-size: font-size-h1
     line-height: line-height-h1
-    font-weight: 500
+    font-weight: bolder
   h2
     font-size: font-size-h2
     line-height: line-height-h2
-    font-weight: 500
+    font-weight: bolder
   h3
     font-size: font-size-h3
     line-height: line-height-h3
-    font-weight: 300
-  h4
-    font-size: font-size-content
-    font-weight: normal
-  h5, h6
-    font-size: font-size-meta
-    font-weight: normal
+    font-weight: bolder
   strong
     font-weight: bold
   em, cite

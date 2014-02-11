@@ -1,11 +1,13 @@
-<% page.posts.each(function(post){ %>
-  <div class="article">
-    <div class="article-header">
-      <%- partial('post/title', {post: post, class_name: 'article-title'}) %>
-      <%- partial('post/date', {post: post, date_format: null}) %>
+<div class="archives">
+  <% page.posts.each(function(post){ %>
+    <div class="archive-wrap">
+      <div class="archive">
+        <%- partial('post/title', {post: post, class_name: 'archive-title'}) %>
+        <%- partial('post/date', {post: post, class_name: 'archive-date'}) %>
+      </div>
     </div>
-  </div>
-<% }) %>
+  <% }) %>
+</div>
 
 <% if (page.total > 1){ %>
   <div id="page-nav">

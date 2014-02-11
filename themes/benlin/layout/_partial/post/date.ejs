@@ -1,4 +1,3 @@
-<div class="article-header-divider"></div>
-<a href="<%- page.root %><%- post.path %>" class="article-date">
-  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
+<a href="<%- page.root %><%- post.path %>" class="<%= class_name %>">
+  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time>
 </a>

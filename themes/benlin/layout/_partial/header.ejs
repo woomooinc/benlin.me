@@ -3,7 +3,7 @@
     <a href="<%- page.root %>" id="logo"><%= config.title %></a>
   </h1>
   <div id="lang-switch">
-    <a href="<%- config.root %>" class="lang-button<% if (!is_current('zh')){ %> active<% } %>">English</a>
-    <a href="<%- config.root %>zh/" class="lang-button<% if (is_current('zh')){ %> active<% } %>">中 文</a>
+    <a href="<%- config.root %><%- page.path === 'zh/' ? '' : page.path %>" class="lang-button<% if (!is_current('zh')){ %> active<% } %>">English</a>
+    <a href="<%- config.root %>zh/<%- page.path %>" class="lang-button<% if (is_current('zh')){ %> active<% } %>">中 文</a>
   </div>
 </div>
